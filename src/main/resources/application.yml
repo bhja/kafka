@@ -5,12 +5,14 @@ spring:
       client-id: poc
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-     # properties:
+      properties:
+        buffer.memory: 67108864
      #   max.in.flight.requests.per.connection: 5
-    #bootstrap-servers: localhost:29092,localhost:39092
-    bootstrap-servers: ec2-3-90-21-103.compute-1.amazonaws.com:9092
+    bootstrap-servers: localhost:29092,localhost:39092
 logging:
   level:
     ROOT: info
 
-
+reactor:
+  schedulers:
+    defaultBoundedElasticQueueSize: 500000

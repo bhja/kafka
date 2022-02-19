@@ -10,7 +10,9 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Request {
-    int limit = 100000;
-    boolean logIt;
-    String correlationId= UUID.randomUUID().toString();
+    private int limit = 1000000;
+    private boolean logIt;
+    String type = "single";
+    private int maxSeconds = 30;
+    private String correlationId= UUID.randomUUID().toString();
 }

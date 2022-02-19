@@ -20,8 +20,8 @@ public class PocController {
     }
 
     @PostMapping(value="/producer",
-            consumes =  MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+            consumes =  MediaType.APPLICATION_JSON_VALUE
+            )
     public void send(@RequestBody Request request) {
         service.sendMessage(request);
     }
