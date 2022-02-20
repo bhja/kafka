@@ -19,3 +19,5 @@ sudo chown -R  `whoami` kafka zookeeper
 
 
 
+
+

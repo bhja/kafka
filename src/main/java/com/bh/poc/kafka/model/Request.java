@@ -13,6 +13,7 @@ public class Request {
     private int limit = 1000000;
     private boolean logIt;
     String type = "single";
+    String topic="kafka-poc";
     private int maxSeconds = 30;
     private String correlationId= UUID.randomUUID().toString();
 }
