@@ -55,7 +55,7 @@ public class KafkaService {
             AtomicBoolean lock = new AtomicBoolean(true);
             Scheduler scheduler  = Schedulers.single() ;
             do {
-                int rand = ThreadLocalRandom.current().nextInt(1,10);
+                int rand = ThreadLocalRandom.current().nextInt(1,11);
                 switch (input.getType()){
                     case "parallel":
                         scheduler= Schedulers.parallel();
